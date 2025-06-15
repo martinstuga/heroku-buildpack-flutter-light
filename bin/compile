@@ -52,6 +52,8 @@ else
   DEPLOY_DIR=$BUILD_DIR/public_html
 fi
 
+mv $SOURCE_DIR/Procfile $DEPLOY_DIR/..
+
 # Find the git tag/branch to get from Flutter repo
 if [ -n "$FLUTTER_VERSION" ]; then
   GIT_TAG=$FLUTTER_VERSION
@@ -125,7 +127,6 @@ fi
 print "Moving static files to the deploy dir"
 mkdir -p $DEPLOY_DIR
 mv $SOURCE_DIR/build/web/* $DEPLOY_DIR
-mv $SOURCE_DIR/Procfile $DEPLOY_DIR/..
 rm -rf $SOURCE_DIR/build
 
 # heroku-buildpac-static compatibility
