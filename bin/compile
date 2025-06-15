@@ -52,8 +52,6 @@ else
   DEPLOY_DIR=$BUILD_DIR/public_html
 fi
 
-mv $SOURCE_DIR/Procfile $DEPLOY_DIR/..
-
 # Find the git tag/branch to get from Flutter repo
 if [ -n "$FLUTTER_VERSION" ]; then
   GIT_TAG=$FLUTTER_VERSION
