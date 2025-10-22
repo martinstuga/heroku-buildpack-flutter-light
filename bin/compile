@@ -73,9 +73,6 @@ else
   fi
 fi
 
-print "Running flutter upgrade command"
-.flutter/bin/flutter upgrade --quiet | indent
-
 flutter --version
 
 # Restore the packages from cache
