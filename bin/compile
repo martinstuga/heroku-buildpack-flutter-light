@@ -73,7 +73,7 @@ else
   fi
 fi
 
-.flutter --version
+.flutter/bin/flutter --version
 
 # Restore the packages from cache
 if [ -d "$CACHE_DIR/.pub-cache" ]; then
